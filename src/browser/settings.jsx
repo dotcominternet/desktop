@@ -64,7 +64,7 @@ var SettingsPage = React.createClass({
     var teams_row = (
     <Row>
       <Col md={ 12 }>
-      <h2>Teams</h2>
+      <h2>Setup Teams</h2>
       <TeamList teams={ this.state.teams } onTeamsChange={ this.handleTeamsChange } />
       </Col>
     </Row>
@@ -89,6 +89,7 @@ var SettingsPage = React.createClass({
         { options_row }
         <Row>
           <Col md={ 12 }>
+          <h4>Click save to continue:</h4>
           <Button id="btnCancel" onClick={ this.handleCancel }>Cancel</Button>
           { ' ' }
           <Button id="btnSave" bsStyle="primary" onClick={ this.handleSave } disabled={ this.state.teams.length === 0 }>Save</Button>
@@ -192,6 +193,7 @@ var TeamListItemNew = React.createClass({
   render: function() {
     return (
       <ListGroupItem>
+        <h4>Add another team:</h4>
         <form className="form-inline" onSubmit={ this.handleSubmit }>
           <div className="form-group">
             <label for="inputTeamName">Name</label>
